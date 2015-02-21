@@ -1,0 +1,29 @@
+input {
+  width: 25px;
+  height: 25px;
+}
+
+#reset_image {
+  width: 150px;
+}
+
+#Red {
+  background-color: red;
+}
+
+#Green {
+  background-color: green;
+}
+
+#Blue {
+  background-color: blue;
+}
+
+#Black {
+  background-color: black;
+}
+
+canvas {
+  border-width: 1;
+  border: solid;
+}
