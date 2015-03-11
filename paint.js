@@ -1,11 +1,17 @@
 /* Asociamos función canvasApp a carga de página */
 window.addEventListener('load', canvasApp, false);	
-
-function canvasApp(){  
+var size=7;
+function showValue(newValue)
+    {
+        document.getElementById("range").innerHTML=newValue;
+        size=newValue;
+    }
+function canvasApp(){      
     /* Inicializamos el canvas */
 	var theCanvas = document.getElementById('canvas');
 	var context = theCanvas.getContext('2d');
-
+    theCanvas.width= window.innerWidth-300;
+    theCanvas.height=window.innerHeight-200;
     /* Inicializamos el valor del color */
 	var colorChosen = document.getElementById("color_chosen");
 
@@ -66,7 +72,7 @@ function canvasApp(){
 
 	  if (begin_drawing) {
 	    context.beginPath();
-	    context.arc(x, y, 7, (Math.PI/180)*0, (Math.PI/180)*360, false);
+	    context.arc(x, y, size, (Math.PI/180)*0, (Math.PI/180)*360, false);
 	    context.fill();
         context.closePath();
 	  }
